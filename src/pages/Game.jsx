@@ -81,7 +81,7 @@ const Game = () => {
     if (!imgPath) return "https://via.placeholder.com/400x300?text=No+Image";
     let cleanPath = imgPath.replace(/\\/g, "/");
     cleanPath = cleanPath.split("images/").pop();
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   if (loading) return <div className="text-white p-20 text-center text-2xl">Loading all games...</div>;

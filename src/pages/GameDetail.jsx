@@ -154,7 +154,7 @@ const GameDetail = () => {
         <div className="flex flex-col lg:flex-row gap-12 mb-20">
           <div className="w-full lg:w-2/5 flex flex-col items-center">
             <img
-              src={`http://localhost:4000/images/${game.picture ? game.picture.replace(/\\/g, "/").split("images/").pop() : ""}`}
+              src={`${import.meta.env.VITE_API_URL}/images/${game.picture ? game.picture.replace(/\\/g, "/").split("images/").pop() : ""}`}
               alt={game.title}
               className="w-full rounded-3xl border border-zinc-800 shadow-2xl"
               onError={(e) => {

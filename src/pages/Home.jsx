@@ -13,7 +13,7 @@ const Home = () => {
     if (!imgPath) return "https://via.placeholder.com/800x450?text=No+Image";
     if (imgPath.startsWith("http")) return imgPath;
     let cleanPath = imgPath.replace(/\\/g, "/").split("images/").pop();
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   const formatDate = (dateString) => {

@@ -23,7 +23,7 @@ const Login = ({ user, setUser, onClose }) => {
     if (!imgPath) return "https://via.placeholder.com/150";
     if (typeof imgPath === "string" && imgPath.startsWith("blob:")) return imgPath;
     let cleanPath = imgPath.replace(/\\/g, "/").split("images/").pop();
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   useEffect(() => {

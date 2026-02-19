@@ -37,7 +37,7 @@ const Navbar = () => {
     if (!user?.profile) return "https://via.placeholder.com/150";
     if (user.profile.startsWith("http")) return user.profile;
     let cleanPath = user.profile.replace(/\\/g, '/').split('images/').pop();
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   const menuItems = [

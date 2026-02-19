@@ -51,7 +51,7 @@ const CommunityFeed = () => {
     setEditPostId(post.id);
     setTitle(post.title);
     setContent(post.content);
-    setPreview(post.picture ? `http://localhost:4000/${post.picture}` : null);
+    setPreview(post.picture ? `${import.meta.env.VITE_API_URL}/${post.picture}` : null);
     setImage(null);
     setIsModalOpen(true);
   };
@@ -276,7 +276,7 @@ const CommunityFeed = () => {
                     </p>
                     {post.picture && (
                       <img
-                        src={`http://localhost:4000/${post.picture}`}
+                        src={`${import.meta.env.VITE_API_URL}/${post.picture}`}
                         className="h-48 w-full object-cover rounded-xl border border-zinc-800 mb-4"
                         alt="post"
                       />

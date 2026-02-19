@@ -82,7 +82,7 @@ const News = () => {
     if (!imgPath) return "https://via.placeholder.com/800x450?text=No+Image";
     let cleanPath = imgPath.replace(/\\/g, '/');
     cleanPath = cleanPath.split('images/').pop(); 
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   if (loading) return <div className="text-white text-center mt-20 text-2xl animate-pulse">Loading News...</div>;

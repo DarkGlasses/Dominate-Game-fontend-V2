@@ -18,7 +18,7 @@ const NewsPopUp = ({ newsItem, onClose }) => {
 
   const getImageUrl = (imgName) => {
     if (!imgName) return "https://via.placeholder.com/800x400?text=No+Image";
-    return `http://localhost:4000/images/${imgName}`;
+    return `${import.meta.env.VITE_API_URL}/images/${imgName}`;
   };
 
   return (

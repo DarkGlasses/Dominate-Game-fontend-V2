@@ -52,7 +52,7 @@ const AdminDashboard = () => {
     if (!imgPath) return "https://via.placeholder.com/150?text=No+Image";
     if (imgPath.startsWith("http")) return imgPath;
     let clean = imgPath.replace(/\\/g, "/").split("images/").pop();
-    return `http://localhost:4000/images/${clean}`;
+    return `${import.meta.env.VITE_API_URL}/images/${clean}`;
   };
 
   // --- Selection Logic ---

@@ -107,7 +107,7 @@ const CommunityPostDetail = () => {
           
           {post.picture && (
             <img
-              src={`http://localhost:4000/${post.picture}`}
+              src={`${import.meta.env.VITE_API_URL}/${post.picture}`}
               className="w-full rounded-3xl mb-4 object-cover max-h-[600px] border border-zinc-800"
               alt="post"
             />
