@@ -35,7 +35,7 @@ const NewsDetail = () => {
 
     cleanPath = cleanPath.split("images/").pop();
 
-    return `http://localhost:4000/images/${cleanPath}`;
+    return `${import.meta.env.VITE_API_URL}/images/${cleanPath}`;
   };
 
   if (loading)
